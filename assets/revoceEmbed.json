@@ -1,0 +1,32 @@
+{
+    "embed": {
+        "title": "Twitch Notification Log",
+        "description": "Revocation",
+        "fields": [
+            {
+                "name": "Id",
+                "value": null,
+                "inline": false
+            },
+            {
+                "name": "Status",
+                "value": null,
+                "inline": true
+            },
+            {
+                "name": "Type",
+                "value": null,
+                "inline": true
+            },
+            {
+                "name": "Broadcaster user id",
+                "value": null,
+                "inline": true
+            }
+        ],
+        "footer": {
+            "text": "@Pigges",
+            "icon_url": "https://cdn.discordapp.com/avatars/295886122117234688/185f92028caddc120af7692bc8c762ef.webp"
+        }
+    }
+}

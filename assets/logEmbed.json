@@ -1,0 +1,17 @@
+{
+    "embed": {
+        "title": "Twitch Notification Log",
+        "description": null,
+        "fields": [
+            {
+                "name": "Response",
+                "value": null,
+                "inline": false
+            }
+        ],
+        "footer": {
+            "text": "@Pigges",
+            "icon_url": "https://cdn.discordapp.com/avatars/295886122117234688/185f92028caddc120af7692bc8c762ef.webp"
+        }
+    }
+}

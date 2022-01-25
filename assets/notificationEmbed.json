@@ -1,0 +1,35 @@
+{
+    "embed": {
+        "title": null,
+        "description": null,
+        "color": 9520895,
+        "fields": [
+          {
+            "name": "<:gameIcon:858028840378695690> Game",
+            "value": null,
+            "inline": true
+          },
+          {
+            "name": "<:viewerIcon:858009045674623036> Viewers",
+            "value": null,
+            "inline": true
+          }
+        ],
+        "author": {
+          "name": null,
+          "url": null,
+          "icon_url": null
+        },
+        "image": {
+          "url": null
+        },
+              "footer": {
+          "text": null,
+          "icon_url": null
+        },
+        "timestamp": null,
+        "thumbnail": {
+          "url": null
+        }
+    }
+}
