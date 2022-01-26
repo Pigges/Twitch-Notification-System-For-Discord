@@ -1,5 +1,7 @@
 # Twitch Notifications For Discord
 
+## This is a system that sends out notifications in discord when someone goes live on Twitch, by subscribing to the event through Twitch API. It is made to be run on Vercel as serverless. 
+
 ## API Calls
 Add header: "passcode"
 The passcode is defined in the .env file and should be called "passcode"
@@ -39,7 +41,8 @@ The passcode is defined in the .env file and should be called "passcode"
 * Add Subscription /api/addSub
 
     ### Usage:
-    **GET** ```api/addSub```
+    **GET** ```api/addSub?id=75182590```
+    Where the id is the broadcaster user id. 
     #### Return example:
     ```
     {
@@ -70,7 +73,8 @@ The passcode is defined in the .env file and should be called "passcode"
 * Delete Subscription /api/delSub
 
     ### Usage:
-    **GET** ```api/delSub```
+    **GET** ```api/delSub?id=75182590```
+    Where the id is the broadcaster user id. 
     #### Return example:
     ```
     {
@@ -111,8 +115,8 @@ One click deploy button:
 
 **passcode=** Passcode used to protect the API from people who shouldn't access it
 
-**auth=**
+**auth=** The authentication token provided by Twitch and looks like: Bearer prau3ol6mg5glgek8m89ec2s9q5i3i
 
-**clientid=**
+**clientid=** The Client ID is what you get from when you create a Twitch app
 
-**support=<@!295886122117234688>**
+**support=<@!295886122117234688>** Support is simply the variable containing the discord way to ping a user that works with webhook. You get it by typing an "\" before the ping and send the message. 
