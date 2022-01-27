@@ -119,4 +119,6 @@ One click deploy button:
 
 **clientid=** The Client ID is what you get from when you create a Twitch app
 
-**support=<@!295886122117234688>** Support is simply the variable containing the discord way to ping a user that works with webhook. You get it by typing an "\" before the ping and send the message. 
+**support=<@!295886122117234688>** Support is simply the variable containing the discord way to ping a user that works with webhook. You get it by typing an "\" before the ping and send the message
+
+**secret=** The secret is used as a code to verify the Twitch subscription
