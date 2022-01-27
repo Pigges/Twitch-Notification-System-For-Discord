@@ -20,7 +20,7 @@ export default async function handler(req, res) {
                 },
                 "transport": {
                     "method": "webhook",
-                    "callback": `https://${req.host}/api/callback`, 
+                    "callback": `https://${req.headers.host}/api/callback`, 
                     "secret": process.env.secret
                 }
             });
