@@ -2,6 +2,7 @@
 import { readFile } from 'fs/promises';
 import 'dotenv/config'
 import fetch from 'node-fetch';
+import crypto from 'crypto';
 
 import twitchapi from './twitchapi.js';
 
@@ -15,7 +16,7 @@ async function updateEmbed(data) {
     let embed = notificationEmbed.embed;
     // Setting up the links
     const streamLink = `twitch.tv/${data.streamData.user_login}`;
-    const imageLink = data.streamData.thumbnail_url.replace("{width}", "1280").replace("{height}", "720");
+    const imageLink = data.streamData.thumbnail_url.replace("{width}", "1280").replace("{height}", "720") + `?id=${crypto.randomBytes(20).toString('hex')}`; // Generate a random id to get around the discord cache on images
     const thumbnailLink = `https://static-cdn.jtvnw.net/ttv-boxart/${encodeURIComponent(data.streamData.game_name)}-285x380.jpg`;
 
     //Author
