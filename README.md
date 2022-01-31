@@ -2,6 +2,12 @@
 
 ## This is a system that sends out notifications in discord when someone goes live on Twitch, by subscribing to the event through Twitch API. It is made to be run on Vercel as serverless. 
 
+## Deploy
+
+One click deploy button:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FPigges%2FTwitch-Notifications-For-Discord&env=webhook,loghook,passcode,secret,callback,auth,clientid,support&envDescription=Environment%20Variables%20required%20to%20run%20the%20Notification%20server&envLink=https%3A%2F%2Fgithub.com%2FPigges%2FTwitch-Notifications-For-Discord)
+
 ## API Calls
 Add header: "passcode"
 The passcode is defined in the .env file and should be called "passcode"
@@ -97,14 +103,7 @@ The passcode is defined in the .env file and should be called "passcode"
     | webhook_callback_verification | Contains the challenge used to prove that you own the event handler. This is the first event you’ll receive after subscribing to an event. See Responding to a challenge request.  |
     | revocation | Contains the reason why Twitch revoked your subscription. See Revoking your subscription. |
     
-    *Source: [Twitch Developers](https://dev.twitch.tv/docs/eventsub/handling-webhook-events)*
-    
-
-## Deploy
-
-One click deploy button:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FPigges%2FTwitch-Notifications-For-Discord&env=webhook,loghook,passcode,secret,callback,auth,clientid,support&envDescription=Environment%20Variables%20required%20to%20run%20the%20Notification%20server&envLink=https%3A%2F%2Fgithub.com%2FPigges%2FTwitch-Notifications-For-Discord)
+    *Source: [Twitch Developers](https://dev.twitch.tv/docs/eventsub/handling-webhook-events)*    
 
 
 ## Environment Variables
