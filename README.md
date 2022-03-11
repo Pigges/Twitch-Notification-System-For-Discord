@@ -17,7 +17,7 @@ The passcode is defined in the .env file and should be called "passcode"
     #### Usage: 
     **GET** ```api/getSubs```
     #### Return example:
-    ```
+    ```json
     {
         "total": 1,
         "data": [
@@ -50,7 +50,7 @@ The passcode is defined in the .env file and should be called "passcode"
     **GET** ```api/addSub?id=75182590```
     Where the id is the broadcaster user id. 
     #### Return example:
-    ```
+    ```json
     {
         "data": [
             {
@@ -82,7 +82,7 @@ The passcode is defined in the .env file and should be called "passcode"
     **GET** ```api/delSub?id=75182590```
     Where the id is the broadcaster user id. 
     #### Return example:
-    ```
+    ```json
     {
         "status": 204,
         "deleted": [
@@ -121,3 +121,35 @@ The passcode is defined in the .env file and should be called "passcode"
 **support=<@!295886122117234688>** Support is simply the variable containing the discord way to ping a user that works with webhook. You get it by typing an "\" before the ping and send the message
 
 **secret=** The secret is used as a code to verify the Twitch subscription
+
+## Retrive the authentication token from Twitch
+
+```
+POST https://id.twitch.tv/oauth2/token
+    ?client_id=<your client ID>
+    &client_secret=<your client secret>
+    &grant_type=client_credentials
+    &scope=client_credentials
+```
+| Required Parameters | Type   | Description                  |
+|---------------------|--------|------------------------------|
+| `client_id`         | string | Your client ID.              |
+| `client_secret`     | string | Your client secret.          |
+| `grant_type`        | string | Must be `client_credentials` |
+
+| Optional Parameters | Type   | Description                  |
+|---------------------|--------|------------------------------|
+| `scope`             | string | Space-separated list of [scopes](https://dev.twitch.tv/docs/authentication/#scopes).|
+
+*Source: [Twitch Developers](https://dev.twitch.tv/docs/authentication/getting-tokens-oauth/#oauth-client-credentials-flow)*
+
+Return example:
+```json
+{
+  "access_token": "prau3ol6mg5glgek8m89ec2s9q5i3i",
+  "refresh_token": "",
+  "expires_in": 3600,
+  "scope": [],
+  "token_type": "bearer"
+}
+```
